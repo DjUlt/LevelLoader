@@ -652,6 +652,7 @@ THREE.OBJLoader = ( function () {
 				}
 
 				mesh.name = object.name;
+				mesh.material.side = THREE.DoubleSide;
 
 				container.add( mesh );
 
