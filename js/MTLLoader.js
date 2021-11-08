@@ -479,6 +479,7 @@ THREE.MTLLoader.MaterialCreator.prototype = {
 		}
 
 		this.materials[ materialName ] = new THREE.MeshPhongMaterial( params );
+		this.materials[ materiaName ].material.side = THREE.DoubleSide;
 		return this.materials[ materialName ];
 
 	},
