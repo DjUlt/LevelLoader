@@ -111,7 +111,7 @@ function loadScene(LevelID){
 
 //Set Collision Colour
 function setColour(Mesh){
-	
+	Mesh.material.side = THREE.DoubleSide;
 	switch (Mesh.name){
 
 		case "00100200":
@@ -147,9 +147,11 @@ function loadPlacement(PlacementID){
 							Node.children[1].children[0].innerHTML * 0.001);
 
 						var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+						material.side = THREE.DoubleSide;
 						material.transparent = true;
 						material.opacity = 0.5;
 						var cube = new THREE.Mesh( geometry, material );
+						cube.material.side = THREE.DoubleSide;
 
 						cube.position.set(
 							Node.children[2].children[0].children[0].children[0].innerHTML * 0.001,
