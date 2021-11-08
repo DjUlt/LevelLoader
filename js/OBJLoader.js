@@ -92,6 +92,7 @@ THREE.OBJLoader = ( function () {
 								return cloned;
 							}
 						};
+						material.side = THREE.DoubleSide;
 
 						this.materials.push( material );
 
@@ -546,6 +547,7 @@ THREE.OBJLoader = ( function () {
 
 					}
 					var material = state.object.currentMaterial();
+					material.side = THREE.DoubleSide;
 					if ( material ) material.smooth = state.object.smooth;
 
 				} else {
@@ -626,6 +628,7 @@ THREE.OBJLoader = ( function () {
 					}
 
 					material.flatShading = sourceMaterial.smooth ? false : true;
+					material.side = THREE.DoubleSide;
 
 					createdMaterials.push(material);
 
